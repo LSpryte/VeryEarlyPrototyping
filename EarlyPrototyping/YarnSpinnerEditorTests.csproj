@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FE121284-4F13-1572-B1ED-E7A6C4EA1F88}</ProjectGuid>
+    <ProjectGuid>{FE5D600B-001B-A48F-0379-4B2C1C6EEC85}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>YarnSpinnerEditorTests</AssemblyName>
@@ -266,7 +266,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -623,25 +623,25 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="YarnSpinner.Unity.csproj">
-      <Project>{DABCBD7E-8673-BFBC-7E16-166D19F54865}</Project>
+      <Project>{66B4D214-37D4-4758-6C39-076E1D2B4ED5}</Project>
       <Name>YarnSpinner.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="YarnSpinner.Unity.Editor.csproj">
-      <Project>{36FA2E61-CF71-D067-1EBF-E7AB2EA06E31}</Project>
+      <Project>{ED9A0E5C-BCF9-EAAB-4947-2ACDBB2CFCFE}</Project>
       <Name>YarnSpinner.Unity.Editor</Name>
     </ProjectReference>
   </ItemGroup>

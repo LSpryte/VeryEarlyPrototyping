@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed; //player movement speed
-    float horizontalInput, verticalInput; //store input
+    float horizontalInput;
+    float verticalInput; //store input
     public Rigidbody2D rb; //player's rigidbody
     Vector3 cameraOffset = new Vector3(0, 0, -10); //distance of camera from ground
     public Vector2 FacingDirection; //direction the player sprite is facing
@@ -14,7 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public Animator myChildAnimator; //player childs' collidor animation component
 
     bool canAttack = true; //used for delay between attacks
+    bool canCombo = true;
     bool firstFrame = true; //used to set initial facing direction
+
+    public static int attackComboCounter = 0; //used to track spot in combo
+    public int comboVis;
+    public float lastAttackedTime = 0; //time when button was last pressed
+    float maxComboDelay = 1; //time allowed to achieve combo
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     { 
         Attack();
         AnimBlendSetFloats();
+        comboVis = attackComboCounter;
     }
 
     // moves the player sprite, called in fixed update
@@ -43,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         //create a vector based off input data
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
-        
+
         //if the vector does not equal zero (and therefore the player is moving)
         if (movement != Vector2.zero)
         {
@@ -51,7 +59,9 @@ public class PlayerMovement : MonoBehaviour
             FacingDirection = movement;
             //trigger animations
             myAnimator.SetBool("Walking", true);
+            myChildAnimator.SetBool("Walking", true);
             myAnimator.SetBool("Idling", false);
+            myChildAnimator.SetBool("Idling", false);
         }
         else //the player is standing still
         {
@@ -64,9 +74,10 @@ public class PlayerMovement : MonoBehaviour
             }
             //trigger animations
             myAnimator.SetBool("Walking", false);
+            myChildAnimator.SetBool("Walking", false);
             myAnimator.SetBool("Idling", true);
+            myChildAnimator.SetBool("Idling", true);
         }
-        
         movement *= moveSpeed; //multiply movement by speed
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime); //move game object via rigidbody
         Camera.main.transform.position = transform.position + cameraOffset; //move camera with player
@@ -75,15 +86,28 @@ public class PlayerMovement : MonoBehaviour
     //called in update
     private void Attack()
     {
+        if(Time.time - lastAttackedTime > maxComboDelay)
+        {
+            attackComboCounter = 0;
+        }
         //if player hits the key input manager associates with "Fire1"
         if (Input.GetButtonUp("Fire1"))
         {
             if (canAttack) //if we are past the delay time
             {
-                PlayAttackAnimations(); //move the sword's collider
+                lastAttackedTime = Time.time;
+                attackComboCounter++;
+                
+                //if(attackComboCounter == 1)
+                //{
+                //    PlayAttackAnimations();
+                //}
+                PlayAttackAnimations();
                 Debug.Log("attack");
-                canAttack = false; //disable attack until...
-                StartCoroutine(AttackWait()); //...timer resets it to true.
+                attackComboCounter = Mathf.Clamp(attackComboCounter, 0, 3);
+                //canAttack = false; //disable attack until...
+                //StartCoroutine(AttackWait()); //...timer resets it to true.
+                //StartCoroutine(ComboWait());          
             }
             else
             {
@@ -133,5 +157,12 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f); //wait .5 seconds
         canAttack = true; //allow player to attack again
+    }
+    IEnumerator ComboWait()
+    {
+        yield return new WaitForSeconds(1);
+        canAttack = false;
+        yield return new WaitForSeconds(3f);
+        canAttack = true;
     }
 }

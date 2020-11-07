@@ -180,6 +180,7 @@ MonoBehaviour:
   FacingDirection: {x: 0, y: 0}
   myAnimator: {fileID: 273351957}
   myChildAnimator: {fileID: 781359668}
+  attackComboCounter: 0
 --- !u!95 &273351957
 Animator:
   serializedVersion: 3

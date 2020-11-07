@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{36FA2E61-CF71-D067-1EBF-E7AB2EA06E31}</ProjectGuid>
+    <ProjectGuid>{ED9A0E5C-BCF9-EAAB-4947-2ACDBB2CFCFE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>YarnSpinner.Unity.Editor</AssemblyName>
@@ -273,37 +273,37 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Antlr4.Runtime.Standard">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
     </Reference>
     <Reference Include="CsvHelper">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/CsvHelper.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/CsvHelper.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/Google.Protobuf.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Buffers.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Memory.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Numerics.Vectors.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.TypeExtensions">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="YarnSpinner.Compiler">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
     </Reference>
     <Reference Include="YarnSpinner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -660,21 +660,21 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="YarnSpinner.Unity.csproj">
-      <Project>{DABCBD7E-8673-BFBC-7E16-166D19F54865}</Project>
+      <Project>{66B4D214-37D4-4758-6C39-076E1D2B4ED5}</Project>
       <Name>YarnSpinner.Unity</Name>
     </ProjectReference>
   </ItemGroup>

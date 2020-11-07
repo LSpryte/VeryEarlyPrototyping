@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0440E443-8138-F02A-7D18-C3213242DA5D}</ProjectGuid>
+    <ProjectGuid>{A762EC26-F961-A80A-B09C-4789C868D2D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,7 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Combo.cs" />
+    <Compile Include="Assets\Combo2.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\enemyScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -97,7 +100,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\enemyScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -306,34 +308,34 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Antlr4.Runtime.Standard">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
     </Reference>
     <Reference Include="CsvHelper">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/CsvHelper.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/CsvHelper.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/Google.Protobuf.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Buffers.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Memory.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Numerics.Vectors.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.TypeExtensions">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="YarnSpinner.Compiler">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
     </Reference>
     <Reference Include="YarnSpinner">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -681,98 +683,98 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/YarnSpinnerTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="YarnSpinner.Unity.Example.csproj">
-      <Project>{ED9FC785-C059-C863-3608-3F24F97A30F5}</Project>
+      <Project>{69FF4757-24D7-E175-F143-4C0ECFC117D0}</Project>
       <Name>YarnSpinner.Unity.Example</Name>
     </ProjectReference>
     <ProjectReference Include="YarnSpinner.Unity.Editor.csproj">
-      <Project>{36FA2E61-CF71-D067-1EBF-E7AB2EA06E31}</Project>
+      <Project>{ED9A0E5C-BCF9-EAAB-4947-2ACDBB2CFCFE}</Project>
       <Name>YarnSpinner.Unity.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="YarnSpinner.Unity.csproj">
-      <Project>{DABCBD7E-8673-BFBC-7E16-166D19F54865}</Project>
+      <Project>{66B4D214-37D4-4758-6C39-076E1D2B4ED5}</Project>
       <Name>YarnSpinner.Unity</Name>
     </ProjectReference>
   </ItemGroup>

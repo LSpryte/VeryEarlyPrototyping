@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa11d54046447bd40905c27a0e38fd99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpriteColliderChild: {fileID: 0}
   moveSpeed: 5
   rb: {fileID: 273351955}
   FacingDirection: {x: 0, y: 0}
   myAnimator: {fileID: 273351957}
   myChildAnimator: {fileID: 781359668}
-  isAttacking: 0
+  comboVis: 0
+  lastAttackedTime: 0
 --- !u!95 &273351957
 Animator:
   serializedVersion: 3
