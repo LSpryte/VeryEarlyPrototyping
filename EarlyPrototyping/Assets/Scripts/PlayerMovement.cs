@@ -95,11 +95,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             lastAttackedTime = Time.time;
-            PlayAttackAnimations();
             attackComboCounter++;
-            Debug.Log("increased combo by1");
+            PlayAttackAnimations();
+            Debug.Log("increased combo by 1");
             Debug.Log("clicked while facing: " + FacingDirection);
-            attackComboCounter = Mathf.Clamp(attackComboCounter, 0, 2);
+            attackComboCounter = Mathf.Clamp(attackComboCounter, 0, 3);
         }
     }
 
@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
     // plays attack animations for both player and invisible weapon collider
     private void PlayAttackAnimations()
     {
-        if (attackComboCounter == 0)
+        if (attackComboCounter == 1)
         {
             //if player is holding down two buttons, moving diagonally
             if (Mathf.Abs(FacingDirection.x) == Mathf.Abs(FacingDirection.y))
@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
                 myAnimator.SetTrigger("AttackingDown");
             }
         }
-        if(attackComboCounter == 1)
+        if(attackComboCounter == 2)
         {
             if (Mathf.Abs(FacingDirection.x) == Mathf.Abs(FacingDirection.y))
             {
@@ -185,6 +185,46 @@ public class PlayerMovement : MonoBehaviour
                 myAnimator.SetTrigger("AttackingDown2");
             }
             
+        }
+        if (attackComboCounter == 3)
+        {
+            if (Mathf.Abs(FacingDirection.x) == Mathf.Abs(FacingDirection.y))
+            {
+                if (FacingDirection.y > 0)
+                {
+                    myChildAnimator.SetTrigger("AttackUp2");
+                    myAnimator.SetTrigger("AttackingUp2");
+                }
+                if (FacingDirection.y < 0)
+                {
+                    myChildAnimator.SetTrigger("AttackDown2");
+                    myAnimator.SetTrigger("AttackingDown2");
+                }
+                return;
+            }
+            if (FacingDirection.x > 0)
+            {
+                myChildAnimator.SetTrigger("AttackRight2");
+                myAnimator.SetTrigger("AttackingRight2");
+            }
+            if (FacingDirection.x < 0)
+            {
+                myChildAnimator.SetTrigger("AttackLeft2");
+                myAnimator.SetTrigger("AttackingLeft2");
+            }
+            if (FacingDirection.y > 0
+                && FacingDirection.x < 0.1 && FacingDirection.x > -0.1)
+            {
+                myChildAnimator.SetTrigger("AttackUp2");
+                myAnimator.SetTrigger("AttackingUp2");
+            }
+            if (FacingDirection.y < 0
+                && FacingDirection.x < 0.1 && FacingDirection.x > -0.1)
+            {
+                myChildAnimator.SetTrigger("AttackDown2");
+                myAnimator.SetTrigger("AttackingDown2");
+            }
+
         }
     }
 
