@@ -19,16 +19,12 @@ public class Combo : StateMachineBehaviour
    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Called onstate exit");
-        if(PlayerMovement.attackComboCounter >= 2)
-        {
-            Debug.Log("called onstateExit if attackcombo>=2");
-            animator.SetTrigger("Attack2");
-        }
-        if (PlayerMovement.attackComboCounter >= 3)
-        {
-            animator.SetTrigger("Attack3");
-        }
+        //Debug.Log("Called onstate exit");
+        //if(PlayerMovement.attackComboCounter >= 2)
+        //{
+        //    Debug.Log("called onstateExit if attackcombo>=2");
+        //    animator.SetBool("Attack2",true);
+        //}
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

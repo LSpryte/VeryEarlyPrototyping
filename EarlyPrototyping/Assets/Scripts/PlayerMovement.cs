@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool canCombo = true;
     bool firstFrame = true; //used to set initial facing direction
 
-    public static int attackComboCounter = 0; //used to track spot in combo
+    public int attackComboCounter = 0; //used to track spot in combo
     public int comboVis;
     public float lastAttackedTime = 0; //time when button was last pressed
     float maxComboDelay = 1; //time allowed to achieve combo
@@ -89,30 +89,17 @@ public class PlayerMovement : MonoBehaviour
         if(Time.time - lastAttackedTime > maxComboDelay)
         {
             attackComboCounter = 0;
+            Debug.Log("reset combo to 0");
         }
         //if player hits the key input manager associates with "Fire1"
         if (Input.GetButtonUp("Fire1"))
         {
-            if (canAttack) //if we are past the delay time
-            {
-                lastAttackedTime = Time.time;
-                attackComboCounter++;
-                
-                //if(attackComboCounter == 1)
-                //{
-                //    PlayAttackAnimations();
-                //}
-                PlayAttackAnimations();
-                Debug.Log("attack");
-                attackComboCounter = Mathf.Clamp(attackComboCounter, 0, 3);
-                //canAttack = false; //disable attack until...
-                //StartCoroutine(AttackWait()); //...timer resets it to true.
-                //StartCoroutine(ComboWait());          
-            }
-            else
-            {
-                Debug.Log("can't attack yet!");
-            }
+            lastAttackedTime = Time.time;
+            PlayAttackAnimations();
+            attackComboCounter++;
+            Debug.Log("increased combo by1");
+            Debug.Log("clicked while facing: " + FacingDirection);
+            attackComboCounter = Mathf.Clamp(attackComboCounter, 0, 2);
         }
     }
 
@@ -120,26 +107,84 @@ public class PlayerMovement : MonoBehaviour
     // plays attack animations for both player and invisible weapon collider
     private void PlayAttackAnimations()
     {
-        //checks direction player is facing, then triggers animations for that direction.
-        if(FacingDirection.x > 0)
+        if (attackComboCounter == 0)
         {
-            myChildAnimator.SetTrigger("AttackRight");
-            myAnimator.SetTrigger("AttackingRight");
+            //if player is holding down two buttons, moving diagonally
+            if (Mathf.Abs(FacingDirection.x) == Mathf.Abs(FacingDirection.y))
+            {//prioritize vertical animation
+                if (FacingDirection.y > 0)
+                {
+                    myChildAnimator.SetTrigger("AttackUp");
+                    myAnimator.SetTrigger("AttackingUp");
+                }
+                if (FacingDirection.y < 0)
+                {
+                    myChildAnimator.SetTrigger("AttackDown");
+                    myAnimator.SetTrigger("AttackingDown");
+                }
+                return;
+            }
+            //checks direction player is facing, then triggers animations for that direction.
+            if (FacingDirection.x > 0)
+            {
+                myChildAnimator.SetTrigger("AttackRight");
+                myAnimator.SetTrigger("AttackingRight");
+            }
+            if (FacingDirection.x < 0)
+            {
+                myChildAnimator.SetTrigger("AttackLeft");
+                myAnimator.SetTrigger("AttackingLeft");
+            }
+            if (FacingDirection.y > 0)
+            {
+                myChildAnimator.SetTrigger("AttackUp");
+                myAnimator.SetTrigger("AttackingUp");
+            }
+            if (FacingDirection.y < 0)
+            {
+                myChildAnimator.SetTrigger("AttackDown");
+                myAnimator.SetTrigger("AttackingDown");
+            }
         }
-        if(FacingDirection.x < 0)
+        if(attackComboCounter == 1)
         {
-            myChildAnimator.SetTrigger("AttackLeft");
-            myAnimator.SetTrigger("AttackingLeft");
-        }
-        if(FacingDirection.y > 0)
-        {
-            myChildAnimator.SetTrigger("AttackUp");
-            myAnimator.SetTrigger("AttackingUp");
-        }
-        if (FacingDirection.y < 0)
-        {
-            myChildAnimator.SetTrigger("AttackDown");
-            myAnimator.SetTrigger("AttackingDown");
+            if (Mathf.Abs(FacingDirection.x) == Mathf.Abs(FacingDirection.y))
+            {
+                if (FacingDirection.y > 0)
+                {
+                    myChildAnimator.SetTrigger("AttackUp2");
+                    myAnimator.SetTrigger("AttackingUp2");
+                }
+                if (FacingDirection.y < 0)
+                {
+                    myChildAnimator.SetTrigger("AttackDown2");
+                    myAnimator.SetTrigger("AttackingDown2");
+                }
+                return;
+            }
+            if (FacingDirection.x > 0)
+            {
+                myChildAnimator.SetTrigger("AttackRight2");
+                myAnimator.SetTrigger("AttackingRight2");
+            }
+            if (FacingDirection.x < 0)
+            {
+                myChildAnimator.SetTrigger("AttackLeft2");
+                myAnimator.SetTrigger("AttackingLeft2");
+            }
+            if (FacingDirection.y > 0
+                && FacingDirection.x < 0.1 && FacingDirection.x > -0.1)
+            {
+                myChildAnimator.SetTrigger("AttackUp2");
+                myAnimator.SetTrigger("AttackingUp2");
+            }
+            if (FacingDirection.y < 0 
+                && FacingDirection.x < 0.1 && FacingDirection.x > -0.1)
+            {
+                myChildAnimator.SetTrigger("AttackDown2");
+                myAnimator.SetTrigger("AttackingDown2");
+            }
+            
         }
     }
 
