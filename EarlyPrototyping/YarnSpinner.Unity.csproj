@@ -270,6 +270,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>E:/Unityhub/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
     <Reference Include="Antlr4.Runtime.Standard">
       <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
     </Reference>
@@ -299,6 +305,12 @@
     </Reference>
     <Reference Include="YarnSpinner">
       <HintPath>D:/Git/EarlyPrototyping/VeryEarlyPrototyping/EarlyPrototyping/Assets/YarnSpinner/Runtime/DLLs/YarnSpinner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>E:/Unityhub/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>E:/Unityhub/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
