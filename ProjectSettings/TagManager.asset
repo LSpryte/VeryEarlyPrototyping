@@ -19,7 +19,7 @@ TagManager:
   - Map
   - Enemies
   - Player
-  - 
+  - Weapons
   - Obstacles
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Obstacles
     uniqueID: 436064453
+    locked: 0
+  - name: UI
+    uniqueID: 3842839439
     locked: 0
