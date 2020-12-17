@@ -6,22 +6,40 @@ using TMPro;
 
 public class PlayerDialogueScript : MonoBehaviour
 {
-    bool nearElias = false;
+    public bool nearElias = false;
     public int buttonClickCounter = 0;
-    public string[] dialogueLines = { "Dialogue 0", "Dialogue 1", "Dialogue 2", "Dialogue 3" };
+    public string[] dialogueLines;
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
+    public GameObject dialogueButtons;
+    public string[] responseOption1;
+    public string responseOption2;
+    private bool afterOption = false;
+    private bool afterOption2 = false;
+
     // Start is called before the first frame update
     void Start()
     {
         dialogueBox.SetActive(false);
+        dialogueButtons.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2")&&nearElias)
+        if (Input.GetButtonDown("Fire2") && nearElias)
         {
+            ShowDialogueLines();
+        }
+
+    }
+
+    private void ShowDialogueLines()
+    {
+        if (!afterOption&&!afterOption2)
+        {
+
+
             //Inserting text
             /*if (buttonClickCounter == 0 )
              {
@@ -36,23 +54,73 @@ public class PlayerDialogueScript : MonoBehaviour
                  Debug.Log("Dialogue 2");
              } */
             dialogueBox.SetActive(true);
-            Debug.Log(dialogueLines[buttonClickCounter]);
-            dialogueText.text = dialogueLines[buttonClickCounter];
-            //buttonClickCounter = buttonClickCounter + 1;
-            Debug.Log("button Clicks");
-            buttonClickCounter = Mathf.Clamp(buttonClickCounter +1 ,0, 3);
-            Debug.Log(buttonClickCounter);
+            buttonClickCounter = buttonClickCounter + 1;
+            /*if (buttonClickCounter == dialogueLines.Length + 1)
+            {
+                dialogueBox.SetActive(false);
+                buttonClickCounter = 0;
+            }*/
+            if (buttonClickCounter <= dialogueLines.Length)
+            {
+                dialogueText.text = dialogueLines[buttonClickCounter - 1];
+            }
+            //buttonClickCounter = Mathf.Clamp(buttonClickCounter , 0, dialogueLines.Length - 1);
+            if (buttonClickCounter == dialogueLines.Length)
+            {
+                dialogueButtons.SetActive(true);
+
+            }
+        }
+        else if(afterOption&&!afterOption2)
+        {
+            buttonClickCounter = buttonClickCounter + 1;
+            if (buttonClickCounter == responseOption1.Length + 1)
+            {
+                afterOption = false;
+                dialogueBox.SetActive(false);
+                buttonClickCounter = 0;
+            }
+            else
+            {
+                dialogueText.text = responseOption1[buttonClickCounter - 1];
+            }
+        }
+        else if (afterOption2 && !afterOption)
+        {
+            afterOption2 = false;
+            dialogueBox.SetActive(false);
+            buttonClickCounter = 0;
         }
     }
+
+    public void ButtonOptionClick()
+    {
+        buttonClickCounter = 0;
+    }
+
+    public void ButtonOptionOne()
+    {
+        afterOption = true;
+        dialogueText.text = responseOption1[0];
+        buttonClickCounter = 1;
+    }
+
+    public void ButtonOptionTwo()
+    {
+        dialogueText.text = responseOption2;
+        afterOption2 = true;
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         nearElias = true;
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         nearElias = false;
-        Debug.Log("no");
         dialogueBox.SetActive(false);
+        buttonClickCounter = 0;
+        dialogueButtons.SetActive(false);
     }
 }

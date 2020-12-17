@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if(Time.time - lastAttackedTime > maxComboDelay)
         {
             attackComboCounter = 0;
-            Debug.Log("reset combo to 0");
+            //Debug.Log("reset combo to 0");
         }
         //if player hits the key input manager associates with "Fire1"
         if (Input.GetButtonUp("Fire1"))
